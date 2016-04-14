@@ -86,6 +86,7 @@ class Pst extends PstModule
 
 
         parent::__construct();
+        $this->dependencies = array();
 
         $this->_hook_list = array('header','controllerConstruct','backOfficeHome', 'displayBackOfficeFooter');
         /* The parent construct is required for translations */

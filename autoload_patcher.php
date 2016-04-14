@@ -29,6 +29,8 @@ if(!file_exists($fileName))
     $search = "\$this->getClassesFromDir('controllers/')";
     $replace = "\$this->getClassesFromDir('controllers/'),
 			    include _PS_MODULE_DIR_ . 'pst/".$include.".php'";
+    $content = file_get_contents($fileName);
+
     if(!file_exists($fileName))
     {
         die('PST Module can’t find Autoload to fix it');
