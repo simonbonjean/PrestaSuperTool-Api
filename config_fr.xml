@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>pst</name>
+	<displayName><![CDATA[Outils]]></displayName>
+	<version><![CDATA[0.1.3]]></version>
+	<description><![CDATA[A set of tools by PrestaSuperTool]]></description>
+	<author><![CDATA[Prestashop Super Tool]]></author>
+	<tab><![CDATA[administration]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

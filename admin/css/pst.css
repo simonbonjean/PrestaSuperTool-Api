@@ -1,0 +1,133 @@
+ol.sortable .icon_type{
+    float: left;
+}
+.box_module{
+    margin-bottom: 10px;;
+}
+.box_type h3{
+    margin-top: 0;
+}
+
+.Picture-bool{
+    float: left;
+    width: 50%;
+}
+
+
+fieldset {
+    width: auto;
+    float: left;
+    margin-right: 5px;
+}
+
+.box-container-columned {
+
+}
+
+
+ol.sortable{
+    /*max-width: 460px;*/
+    min-width: 220px;
+}
+#gallery_Picture_form label{
+}
+#gallery_Picture_form .gallery-list{
+    text-align: left;
+}
+#gallery_Picture_form fieldset{
+    margin-bottom: 15px;
+}
+#gallery_Picture_form .margin-form{
+    padding: 0 0 1em 5px;
+}
+.box_type div.selected{
+    border: 1px solid red;
+}
+.box_type.no-border{
+    border: 0;
+}
+.box-box-hidden{
+    display: none;
+}
+.field-Picture_type .radio-Picture{
+    width: 150px;
+    margin-right: 15px;
+}
+.margin-form input[type=text]{width: 100%}
+.margin-form .preference_description{width: 100%}
+.radio-Picture{
+    width: auto;
+    float: left;
+    padding-bottom: 7px;
+}
+.type_box {
+    width: auto;
+    float: left;
+    margin-left: 20px;
+}
+.type_box label{ text-align: left }
+.type_box .margin-form{
+    clear: both;
+    padding: 0 0 1em 0px;
+}
+.box-global{
+    min-width: 450px;
+    width: 63%;
+    float: left;
+    margin-left: 0px;
+}
+.box-global .margin-form{
+    clear: none;
+    margin: 0 0 1em 160px;
+}
+.box-global label{text-align: right;}
+
+.box_type{
+    float: left;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    min-width: 340px;
+    border: 1px solid #CCCED7;
+    border-radius: 5px;;
+    padding: 5px;;
+}
+
+
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.icon_type{
+    float: left;
+}
+ol.sortable{
+    min-height: 15px;
+}
+.actions{
+    float: right;
+
+}
+.box_module .add{
+    width: 16px;
+    float: right;
+}
+/*.title{*/
+/*float: left;*/
+/*}*/
+
+#addTypeList{
+    text-align: left;
+    background-color: white;
+    border: 1px solid #CCCED7;
+    border-radius: 5px;
+    padding: 5px;
+}
+.sortable .adding{
+    min-height: 30px;
+    border: 1px solid red;;
+}
+.form-add{
+    width: 600px;
+    height: 800px;
+
+}

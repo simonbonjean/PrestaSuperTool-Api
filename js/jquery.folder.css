@@ -1,0 +1,22 @@
+/*.block.folder-close .block_content{*/
+    /*display: none;*/
+/*}*/
+.block.folder-open .block_content{
+}
+.folder-close .block_content{
+
+}
+.block .title_block span.folder-puce{
+    margin-top: 5px;
+    float: right;
+    width: 13px;
+    height: 8px;
+}
+.block.folder-open .title_block span.folder-puce{
+    background-image: url("../images/bg-block-title-fold.png");
+}
+.block.folder-close .title_block span.folder-puce{
+    background-image: url("../images/bg-block-title-unfold.png");
+}
+.block .block_content{
+}
