@@ -15,7 +15,7 @@ Extended API allow you to do quickly :
 * Overloading the autoloader to include self class modules.
 
 ## API Exemple
-
+### Automatic configuration 
 ```php
 class PstBlog extends PstModule
 {
@@ -32,6 +32,32 @@ class PstBlog extends PstModule
               )
           );
           ....
+```
+
+### Hook creator 
+```php
+$this->createHook('CustomHook');
+```
+### Admin Tab creator 
+```php
+$this->installTab('AdminPstBlogConfig', "Super Blog", self::TAB_DEFAULT_ROOT);
+```
+### Meta information creator (SEO&URL) 
+```php
+$this->installMeta('Article detail', 'show-article', 'Show Articles', '', 'articledetail');
+```
+### Create img directory 
+```php
+        $this->createImgDirectory('pstblog/ArticleCategory/cover');
+```
+
+### Cached automatic resize image
+```php
+PstImage::cacheResize($path, $fileName, 60,60);
+```
+### Smarty resize image 
+```smarty
+<img class="img-responsive" src="{imageResize name=$element->cover path=$element->cover_path width=500 height=500}" />
 ```
 
 
