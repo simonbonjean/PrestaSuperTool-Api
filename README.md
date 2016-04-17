@@ -14,5 +14,25 @@ Extended API allow you to do quickly :
 * A function that forces the reload class.
 * Overloading the autoloader to include self class modules.
 
+## API Exemple
+
+```php
+class PstBlog extends PstModule
+{
+    protected $_config = array(
+        'general' => array(
+            'label' => 'General',
+            'fields' => array(
+                'PST_PSTBLOG_GENERAL_BLOG_TITLE' => array(
+                    'type' => 'text_lang',
+                    'default_value' => '',
+                    'label' => 'Blog title',
+
+                )
+              )
+          );
+          ....
+```
+
 
 [Offical Web site](http://prestasupertool.com/en/accueil/1-pst-api.html)
