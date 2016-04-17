@@ -61,11 +61,40 @@ PstImage::cacheResize($path, $fileName, 60,60);
 ```smarty
 <img class="img-responsive" src="{imageResize name=$element->cover path=$element->cover_path width=500 height=500}" />
 ```
-
 ### Module cache enhanced 
 ```php
 $this->setLifetime(self::LIFETIME_WEEK);
 $smartyCacheId = $this->getCacheKey($tempalteName, $addictionalParams);
 ```
+### Register smarty function
+```php 
+public function hookControllerConstruct(){
+    $this->checkControllerActive();
+    $this->registerImageResizeSmarty();
+}    
+public function registerImageResizeSmarty(){
+    if(!function_exists('smartyImageResize'))
+    {
+        function smartyImageResize($params,&$smarty){
+            $path   = @$params['path'];
+            $name   = @$params['name'];
+            $height = @$params['height'];
+            $width  = @$params['width'];
+            $customPath  = @$params['customPath'];
+            $method = isset($params['method'])?$params['method']:PstImage::METHOD_RESIZE;
+            if($customPath)
+            {
+                return PstImage::cacheResizeCustomPath($path, $name,$height, $width,$method);
+            }
+            else
+            {
+                return PstImage::cacheResize($path, $name,$height, $width,$method);
+            }
+        }
+        self::smartyRegisterFunction($this->context->smarty, 'function', 'imageResize', 'smartyImageResize');
+    }
+}
+```
+
 
 [Offical Web site](http://prestasupertool.com/en/accueil/1-pst-api.html)
