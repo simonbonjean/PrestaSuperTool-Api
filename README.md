@@ -27,13 +27,16 @@ class PstBlog extends PstModule
                     'type' => 'text_lang',
                     'default_value' => '',
                     'label' => 'Blog title',
-
-                )
+                    )
               )
-          );
-          ....
+          )
+    );
+}
 ```
-
+### Automatic Hook linker
+```php
+protected $_hook_list = array('displayFooter','displayHeader');
+```
 ### Hook creator 
 ```php
 $this->createHook('CustomHook');
@@ -48,9 +51,8 @@ $this->installMeta('Article detail', 'show-article', 'Show Articles', '', 'artic
 ```
 ### Create img directory 
 ```php
-        $this->createImgDirectory('pstblog/ArticleCategory/cover');
+$this->createImgDirectory('pstblog/ArticleCategory/cover');
 ```
-
 ### Cached automatic resize image
 ```php
 PstImage::cacheResize($path, $fileName, 60,60);
@@ -60,5 +62,10 @@ PstImage::cacheResize($path, $fileName, 60,60);
 <img class="img-responsive" src="{imageResize name=$element->cover path=$element->cover_path width=500 height=500}" />
 ```
 
+### Module cache enhanced 
+```php
+$this->setLifetime(self::LIFETIME_WEEK);
+$smartyCacheId = $this->getCacheKey($tempalteName, $addictionalParams);
+```
 
 [Offical Web site](http://prestasupertool.com/en/accueil/1-pst-api.html)
